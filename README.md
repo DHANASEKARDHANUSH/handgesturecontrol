@@ -24,8 +24,7 @@ The project uses *MediaPipe* for real-time hand tracking and *PyAutoGUI* for mou
 4. Smooths cursor movement with linear interpolation (to reduce jitter).  
 5. Recognizes gestures → triggers corresponding OS actions.  
 
-## 📷 Demo
-(Add screenshots or GIFs later of you using it!)  
+
 
 ## 📦 Installation
 1. Clone this repo:
