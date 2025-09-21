@@ -13,7 +13,7 @@ hands = mp_hands.Hands(
     min_detection_confidence=0.9,
     min_tracking_confidence=0.9
 )
-
+#count fingers 
 def count_fingers(landmarks):
     """Count the number of extended fingers"""
     tip_ids = [4, 8, 12, 16, 20]  # Thumb, Index, Middle, Ring, Pinky
@@ -33,7 +33,7 @@ def count_fingers(landmarks):
             fingers.append(0)
     
     return fingers
-
+#function for recognizing gestures
 def recognize_gesture(fingers):
     """Recognize specific gestures based on finger positions"""
     total_fingers = sum(fingers)
@@ -62,7 +62,8 @@ def recognize_gesture(fingers):
     
     
     return "Unknown Gesture"
-
+    
+#calculate distance between index and thumb finger for pinch 
 def calculate_distance(point1, point2):
     """Calculate distance between two points"""
     return math.sqrt((point1.x - point2.x)**2 + (point1.y - point2.y)**2)
@@ -222,4 +223,5 @@ while True:
         print("Screenshot saved as screenshot.png")
 # Clean up
 cam.release()
+
 cv2.destroyAllWindows()
